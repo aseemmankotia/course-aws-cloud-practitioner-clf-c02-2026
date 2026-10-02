@@ -1,0 +1,16 @@
+## Chapter 3: Security and Compliance: The Shared Responsibility Model — Flashcards
+
+| # | Front (Question) | Back (Answer) |
+|---|-----------------|---------------|
+| 1 | What does 'security OF the cloud' mean in the AWS shared responsibility model? | AWS's responsibility: physical security of data centers, host infrastructure (hardware/hypervisor), and network infrastructure. Exam tip: this is the foundation layer — AWS owns it entirely. |
+| 2 | What does 'security IN the cloud' mean? | The customer's responsibility: guest OS, applications, IAM configuration, data, and network traffic protection (firewalls/security groups). Exam tip: this varies depending on the service type (IaaS vs PaaS vs serverless). |
+| 3 | Who patches the guest OS on Amazon EC2? | The customer. EC2 is IaaS — AWS manages only the physical host and hypervisor. Exam tip: this is the #1 tested example of shared responsibility. |
+| 4 | Who patches the OS and database engine on Amazon RDS? | AWS. RDS is a managed service, so AWS handles OS and engine patching (within the customer's maintenance window). Exam tip: customer still manages IAM, security groups, and data encryption settings. |
+| 5 | Who manages the OS/runtime for AWS Lambda? | AWS entirely. Lambda is serverless — customer only manages function code, dependencies, and IAM permissions. Exam tip: least infrastructure responsibility on the customer's side among compute options. |
+| 6 | EC2 vs RDS vs Lambda: who owns guest OS patching? | EC2 → Customer. RDS → AWS (engine/OS). Lambda → AWS (fully managed runtime). Exam tip: responsibility shifts toward AWS as the service becomes more abstracted (IaaS → PaaS/managed → serverless). |
+| 7 | Who is responsible for configuring IAM policies, regardless of the compute service used? | The customer — always. AWS manages the IAM service infrastructure, but policy configuration and least-privilege setup are the customer's job on EC2, RDS, and Lambda alike. |
+| 8 | Who is responsible for encryption in transit (TLS/HTTPS)? | The customer. AWS provides TLS-capable endpoints, but the customer must configure applications/clients to use them. Exam tip: 'in transit' = customer configures the connection method. |
+| 9 | Who is responsible for enabling encryption at rest using AWS KMS? | The customer must explicitly enable and configure server-side encryption (e.g., SSE-KMS) on most services. Exam tip: some services like S3 enable default encryption (SSE-S3) automatically, but customer-managed keys require explicit setup. |
+| 10 | Does AWS manage physical data center security for the customer? | Yes, always — for every service. This is part of 'security OF the cloud' and is never a customer responsibility. |
+| 11 | Which is the customer's job on RDS: database engine patching or database user/permission management? | Database user/permission management. Engine and OS patching shift to AWS with RDS, but managing database-level users, schemas, and permissions remains the customer's responsibility. |
+| 12 | Memory trick: How does responsibility shift from EC2 to Lambda? | Think of a ladder: EC2 (bottom rung, most customer responsibility) → RDS (middle, AWS takes OS/engine) → Lambda (top rung, AWS takes almost everything except code/IAM/data). Exam tip: more abstraction = less customer responsibility. |

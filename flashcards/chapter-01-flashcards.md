@@ -1,0 +1,16 @@
+## Chapter 1: Cloud Concepts: The AWS Cloud Value Proposition — Flashcards
+
+| # | Front (Question) | Back (Answer) |
+|---|-----------------|---------------|
+| 1 | List the six advantages of AWS Cloud computing. | 1) Trade capital expense for variable expense, 2) Benefit from massive economies of scale, 3) Stop guessing capacity, 4) Increase speed and agility, 5) Stop spending money running/maintaining data centers, 6) Go global in minutes. Exam tip: matching-style questions test recognizing scenarios for each. |
+| 2 | Elasticity vs Scalability — exam distinction? | Elasticity = automatic real-time addition AND removal of capacity to match demand. Scalability = general ability to increase (and sometimes decrease) capacity, often planned/manual. Exam tip: 'automatically scales in and out' = elasticity. |
+| 3 | AWS Cloud Adoption Framework (CAF) — six perspectives? | Business, People, Governance, Platform, Security, Operations. Exam tip: first three are business capabilities, last three are technical capabilities. |
+| 4 | Cost avoidance vs Cost savings? | Cost savings = reduction in actual current spend. Cost avoidance = preventing a future cost you would otherwise have incurred (e.g., not buying a hardware refresh). Exam tip: 'avoid future spend' keyword = cost avoidance. |
+| 5 | Which CAF perspective covers staff skills and organizational change readiness? | People perspective. Exam tip: don't confuse with Governance, which covers skills for managing risk/compliance. |
+| 6 | Which CAF perspective covers architecting and provisioning technical solutions on AWS? | Platform perspective. Exam tip: Platform = technical architecture patterns; Operations = running workloads day-to-day. |
+| 7 | Which AWS service is the go-to exam example of elasticity? | AWS Auto Scaling — automatically adds/removes EC2 capacity to match real-time demand. Exam tip: keyword 'automatically' in a scenario points to Auto Scaling/elasticity. |
+| 8 | What does 'trade capital expense for variable expense' mean? | Instead of large upfront investment in data centers (CapEx), pay only for what you consume, when you consume it (OpEx). Exam tip: this is advantage #1 of the six advantages. |
+| 9 | How does AWS achieve 'economies of scale' as a cloud advantage? | AWS aggregates usage across hundreds of thousands of customers, lowering its own costs, and passes savings on through periodic pay-as-you-go price reductions. Exam tip: linked to AWS's history of frequent price drops. |
+| 10 | What is the 'go global in minutes' advantage? | Ability to deploy applications into multiple AWS Regions worldwide within minutes instead of years building physical data centers. Exam tip: directly reduces time to market for global expansion. |
+| 11 | Define 'agility' as an AWS Cloud advantage (exam context). | The ability to rapidly develop, test, and launch applications because compute resources can be provisioned and de-provisioned quickly. Exam tip: don't confuse Agility (speed of innovation) with Elasticity (capacity matching to demand). |
+| 12 | Typical on-premises pain point tested by the exam? | Large upfront CapEx, fixed capacity often over-provisioned for peak demand, and long procurement lead times. Exam tip: a scenario describing idle over-provisioned servers signals the 'variable expense' or 'stop guessing capacity' advantage. |
